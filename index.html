@@ -21,42 +21,43 @@
     }
     
     function playerWins(playerSelection, computerSelection){
-      console.log(`Player draws: ${playerSelection}`);
-      console.log(`Computer draws: ${computerSelection}`);
-      console.log(`You win!`);
+      return(`Player draws: ${playerSelection}\nComputer draws: ${computerSelection}\nYou win!`);
     }
 
     function draw(playerSelection, computerSelection){
-      console.log(`Player draws: ${playerSelection}`);
-      console.log(`Computer draws: ${computerSelection}`);
-      console.log(`It's a draw!`);
+      return(`Player draws: ${playerSelection}\nComputer draws: ${computerSelection}\nIt's a draw!`)
     }
 
     function computerWins(playerSelection, computerSelection){
-      console.log(`Player draws: ${playerSelection}`);
-        console.log(`Computer draws: ${computerSelection}`);
-        console.log(`Computer wins`);
+      return(`Player draws: ${playerSelection}\nComputer draws: ${computerSelection}\nComputer wins`);
     }
 
     function playRound(playerSelection, computerSelection){
       if (playerSelection == undefined){
-        console.log(`Game canceled.`);
+        return(`Game canceled.`);
       }else if (playerSelection == computerSelection){
-        draw(playerSelection, computerSelection);
+        return draw(playerSelection, computerSelection);
       }else if(playerSelection == "rock" && computerSelection == "scissors"){
-        playerWins(playerSelection, computerSelection);
+        return playerWins(playerSelection, computerSelection);
       }else if (playerSelection == "paper" && computerSelection == "rock"){
-        playerWins(playerSelection, computerSelection);
+        return playerWins(playerSelection, computerSelection);
       }else if(playerSelection == "scissors" && computerSelection == "paper"){
-        playerWins(playerSelection, computerSelection);
+        return playerWins(playerSelection, computerSelection);
       }else{
-        computerWins(playerSelection, computerSelection);
+        return computerWins(playerSelection, computerSelection);
       }
     }
 
-    playRound(playerSelection(), computerSelection());
+    function game(){
+      let i; 
+      let playerWins;
+      let computerWins;
+      while (i <= 5){
+        playRound()  
+      }
+    }
  
-
+    console.log(playRound(playerSelection(), computerSelection()));
 
   </script>
 </body>
