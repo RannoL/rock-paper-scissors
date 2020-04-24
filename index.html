@@ -43,11 +43,11 @@
         console.log(`Game canceled.`);
       }else if (playerSelection == computerSelection){
         draw(playerSelection, computerSelection);
-      }else if(playerSelection == "rock", computerSelection == "scissors"){
+      }else if(playerSelection == "rock" && computerSelection == "scissors"){
         playerWins(playerSelection, computerSelection);
-      }else if (playerSelection == "paper", computerSelection == "rock"){
+      }else if (playerSelection == "paper" && computerSelection == "rock"){
         playerWins(playerSelection, computerSelection);
-      }else if(playerSelection == "scissors", computerSelection == "paper"){
+      }else if(playerSelection == "scissors" && computerSelection == "paper"){
         playerWins(playerSelection, computerSelection);
       }else{
         computerWins(playerSelection, computerSelection);
