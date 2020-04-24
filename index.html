@@ -6,7 +6,56 @@
 </head>
 <body>
   <script>
+    function playerSelection(){
+      let playerSelection = prompt("Make your choice! Rock, Paper or Scissors?").toLowerCase()
+      if (playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors"){
+        return playerSelection
+      }else{
+        alert("Invalid choice!")
+      }
+    }
+    function computerSelection(){
+      let selection = ["rock", "paper", "scissors"]
+      let randomSelection = selection[Math.floor(Math.random() * selection.length)]
+      return randomSelection
+    }
+    
+    function playerWins(playerSelection, computerSelection){
+      console.log(`Player draws: ${playerSelection}`);
+      console.log(`Computer draws: ${computerSelection}`);
+      console.log(`You win!`);
+    }
+
+    function draw(playerSelection, computerSelection){
+      console.log(`Player draws: ${playerSelection}`);
+      console.log(`Computer draws: ${computerSelection}`);
+      console.log(`It's a draw!`);
+    }
+
+    function computerWins(playerSelection, computerSelection){
+      console.log(`Player draws: ${playerSelection}`);
+        console.log(`Computer draws: ${computerSelection}`);
+        console.log(`Computer wins`);
+    }
+
+    function playRound(playerSelection, computerSelection){
+      if (playerSelection == computerSelection){
+        draw(playerSelection, computerSelection);
+      }else if(playerSelection == "rock", computerSelection == "scissors"){
+        playerWins(playerSelection, computerSelection);
+      }else if (playerSelection == "paper", computerSelection == "rock"){
+        playerWins(playerSelection, computerSelection);
+      }else if(playerSelection == "scissors", computerSelection == "paper"){
+        playerWins(playerSelection, computerSelection);
+      }else{
+        computerWins(playerSelection, computerSelection);
+      }
+    }
+
+    playRound(playerSelection(), computerSelection());
  
+
+
   </script>
 </body>
 </html>
