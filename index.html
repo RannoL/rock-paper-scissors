@@ -39,7 +39,9 @@
     }
 
     function playRound(playerSelection, computerSelection){
-      if (playerSelection == computerSelection){
+      if (playerSelection == undefined){
+        console.log(`Game canceled.`);
+      }else if (playerSelection == computerSelection){
         draw(playerSelection, computerSelection);
       }else if(playerSelection == "rock", computerSelection == "scissors"){
         playerWins(playerSelection, computerSelection);
