@@ -53,24 +53,25 @@
       let i = 0; 
       let playerWins = 0;
       let computerWins = 0;
+      let draws = 0;
       while (i < 5){
         let result = playRound(playerSelection(), computerSelection());
         console.log(result)
         if (result.includes("You win!")){
-          playerWins += 1;
+          playerWins++;
         }else if (result.includes("Computer wins.")){
-          computerWins += 1;
+          computerWins++;
+        }else if (result.includes("It's a draw!")){
+          draws++
         }
         i++; 
       }
      if (playerWins > computerWins){
-      return (`You win!\nFinal results: Player wins: ${playerWins}\nComputer wins: ${computerWins}`)
+      return (`You win!\nFinal results: Player wins: ${playerWins}\nDraws: ${draws}\nComputer wins: ${computerWins}`)
      }else if(playerWins == computerWins){
-       return (`It's a draw!\nFinal results: Player wins: ${playerWins}\nComputer wins: ${computerWins}`)
-     }
-     
-     else{
-       return (`Computer wins.\nFinal results: Player wins: ${playerWins}\nComputer wins: ${computerWins}`)
+       return (`It's a draw!\nFinal results: Player wins: ${playerWins}\nDraws: ${draws}\nComputer wins: ${computerWins}`)
+     }else{
+       return (`Computer wins.\nFinal results: Player wins: ${playerWins}\nDraws: ${draws}\nComputer wins: ${computerWins}`)
      } 
     }
 
