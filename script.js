@@ -101,6 +101,7 @@ function playRound (computerSelection, playerSelection){
 }   */
 
 
+//Add evenetListener - Game starts when click is made
 for (i= 0; i < inputs.length; i++){
   inputs[i].addEventListener('click', e => {
   playerSelection = (e.target.id);
@@ -111,4 +112,16 @@ for (i= 0; i < inputs.length; i++){
 function playRound(playerSelection, computerSelection){
   console.log(`player: ${playerSelection}`);
   console.log(`computer: ${computerSelection}`);
+
+  if (playerSelection == computerSelection) {
+    console.log(draw(playerSelection, computerSelection));  
+  }else if(playerSelection == "rock" && computerSelection == "scissors"){
+    console.log (playerWins(playerSelection, computerSelection));
+  }else if (playerSelection == "paper" && computerSelection == "rock"){
+    console.log (playerWins(playerSelection, computerSelection));
+  }else if(playerSelection == "scissors" && computerSelection == "paper"){
+    console.log (playerWins(playerSelection, computerSelection));
+  }else{
+    console.log (computerWins(playerSelection, computerSelection));
+  }
 }
