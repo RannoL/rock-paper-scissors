@@ -73,7 +73,7 @@ h2{
     cursor: pointer;
 } 
 
-#results{
+#resultsWrapper{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -81,4 +81,14 @@ h2{
     min-height: 100px;
     max-width: 85%;
     margin: 20px auto 0px auto;
+}
+
+#rockChosen{
+    display: inline-flex;
+    float: right;
+    width: 150px;
+    height: 150px;
+    padding: 0.5%;
+    border-radius: 40%;
+
 }

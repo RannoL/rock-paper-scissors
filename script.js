@@ -1,5 +1,7 @@
 const inputs = document.getElementsByTagName('img');
-let playerSelection = null;
+const resultsWrapper = document.querySelector('#resultsWrapper');
+const para = document.createElement('p');
+resultsWrapper.appendChild(para);
 
 function computerSelection(){
   let selection = ["rock", "paper", "scissors"]
@@ -56,6 +58,13 @@ for (i= 0; i < inputs.length; i++){
 }
 
 function playRound(playerSelection, computerSelection){
+  let playerChoice = document.createElement("img");
+  playerChoice.setAttribute("src", `imgs/${playerSelection}.png`)
+  playerChoice.setAttribute("id", `rockChosen`)
+  para.appendChild(playerChoice);
+
+
+
   console.log(`player: ${playerSelection}`);
   console.log(`computer: ${computerSelection}`);
 
@@ -70,4 +79,8 @@ function playRound(playerSelection, computerSelection){
   }else{
     console.log (computerWins(playerSelection, computerSelection));
   }
+  
+
+
+
 }
