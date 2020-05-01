@@ -47,60 +47,6 @@ function playGame(){
   } 
 }
 
-/* let p = new Promise((resolve,reject) => {
-  let playerSelection = playerSelection();
-  if (playerSelection !== null){
-    resolve(`${playerSelection}`);
-}
-})
-
-p.then((message) => {
-  playRound(message, computerSelection());
-})
-
-
-function playRound(playerSelection, computerSelection){
-  
-  //check if user has made their choice
-  let p = new Promise((resolve,reject) => {
-    if (playerSelection !== null){
-      resolve()
-    }else{
-      reject()
-    }
-  })
-
-  p.then(() => {
-    if (playerSelection == computerSelection) {
-      console.log(draw(playerSelection, computerSelection));  
-    }else if(playerSelection == "rock" && computerSelection == "scissors"){
-      console.log (playerWins(playerSelection, computerSelection));
-    }else if (playerSelection == "paper" && computerSelection == "rock"){
-      console.log (playerWins(playerSelection, computerSelection));
-    }else if(playerSelection == "scissors" && computerSelection == "paper"){
-      console.log (playerWins(playerSelection, computerSelection));
-    }else{
-      console.log (computerWins(playerSelection, computerSelection));
-    }
-  })
-
-} */
-/* 
-function playRound (computerSelection, playerSelection){
-
-  const inputs = document.getElementsByTagName('img');
-  for (i= 0; i < inputs.length; i++){
-    inputs[i].addEventListener('click', e => {
-    playerSelection = (e.target.id);
-  })
-}
-  if (!playerSelection) return;
-  
-  return (playerSelection);
-  return (computerSelection);
-}   */
-
-
 //Add evenetListener - Game starts when click is made
 for (i= 0; i < inputs.length; i++){
   inputs[i].addEventListener('click', e => {
