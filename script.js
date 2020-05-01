@@ -1,4 +1,10 @@
+const inputs = document.getElementsByTagName('img');
 
+for (i= 0; i < inputs.length; i++){
+  inputs[i].addEventListener('click', e => {
+    console.log(e.target.id);
+  })
+}
 
 function playerSelection(){
   let playerSelection = prompt("Make your choice! Rock, Paper or Scissors?").toLowerCase()
@@ -6,7 +12,7 @@ function playerSelection(){
     return playerSelection
   }else{
     alert("Invalid choice!")
-}
+  }
 }
 
 function computerSelection(){

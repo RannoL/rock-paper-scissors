@@ -41,7 +41,7 @@ h2{
 
 }
 
-#rockPic {
+#rock{
     display: inline-block;
     width: 100px;
     height: 100px;
@@ -51,7 +51,7 @@ h2{
     cursor: pointer;
 }   
 
-#paperPic {
+#paper{
     display: block;
     position: relative;
     width: 100px;
@@ -62,7 +62,7 @@ h2{
     cursor: pointer;
 }  
 
-#scissorsPic {
+#scissors{
     display: block;
     position: relative;
     width: 100px;
