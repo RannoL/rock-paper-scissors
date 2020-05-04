@@ -58,6 +58,7 @@ for (i= 0; i < inputs.length; i++){
 }
 
 function playRound(playerSelection, computerSelection){
+  para.textContent = "";
   let playerChoice = document.createElement("img");
   playerChoice.setAttribute("src", `imgs/${playerSelection}.png`)
   playerChoice.setAttribute("id", `rockChosen`)

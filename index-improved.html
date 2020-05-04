@@ -6,22 +6,34 @@
   <meta name="viewport" content="width=device-width" initial-scale="1" charset="UTF-8"/> 
 </head>
 <body>
-
   <div id = 'header'>
     <h1>Rock Paper Scissors</h1>
   </div>
-  <div id = "choiceWrap">
-    <h2>Make your choice!</h2>
-  </div>
-  <div id = 'pictures'>
-      <img id= "rock" src= "imgs/rock.png">
-      <img id= "paper" src= "imgs/paper.png">
-      <img id= "scissors" src= "imgs/scissors.png">
-  </div>
-  <div id = 'resultsWrapper'>
 
+  <div id="player" class="playground">
+    <span class="playgroundText">Player</span>
+    <img class="questionPic" src="imgs/questionMark.png" alt="questionMark">
+  </div>
+
+  <div id="computer" class="playground">
+    <span class="playgroundText">Computer</span>
+    <img class="questionPic" src="imgs/questionMark.png" alt="questionMark">
   </div>
   
+  <div id = "choiceWrap">
+    <h2 id= "header2">Make your choice!</h2>
+  </div>
+
+  <div id = 'pictures'>
+      <img id= "rock" class="rockPaperScissors" src= "imgs/rock.png">
+      <img id= "paper" class="rockPaperScissors" src= "imgs/paper.png">
+      <img id= "scissors" class="rockPaperScissors" src= "imgs/scissors.png">
+  </div>
+
+<!--   <footer>
+  <a href="https://www.vecteezy.com/free-vector/rock-paper-scissors">Rock Paper Scissors Vectors by Vecteezy</a>
+    <a href="https://pngio.com/images/png-a74489.html" target="_blank">15 Purple question mark png for free download on mbtskoudsalg</a>
+  </footer> -->
 
   <script src = 'script.js'></script>
 </body>
