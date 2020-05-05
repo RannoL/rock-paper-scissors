@@ -1,4 +1,3 @@
-
 html{
     height: 100%;
 }
@@ -6,18 +5,61 @@ html{
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
-    margin: 0px 0px 0px 0px;
+    margin: 0;
     width: 100%;
     height: 100%;
     background: rgb(38,20,71);
     background: linear-gradient(0deg, rgba(38,20,71,1) 0%, rgba(13,2,33,1) 100%);
     color: rgb(211, 246, 255);
+    font-weight: bolder;
 }
 
 h1{
     display: inline-flex;
-    font-size: 62px;
+    font-size: 4.5rem;
 
+}
+
+main {
+    font-size: 1.3rem;
+}
+
+a{
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+.footerBar {
+    position: fixed;
+    bottom: 0px;
+    background-color: rgb(38,20,71);
+    border-top: 1px solid rgba(247, 6, 207, 0.575);
+    width: 100%;
+    height: 30px;
+    font-size: 13px;
+}
+
+.leftFooter{
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.leftFooter a{
+   color: rgba(211, 246, 255, 0.4);
+   padding: 0 0 0 21px
+}
+
+.rightFooter{
+    display: inline-flex;
+    float: right;
+    height: 100%;
+    align-items: center;
+}
+
+.rightFooter a{
+   color: rgba(211, 246, 255, 0.4);
+   padding: 0 27px 0 0px;
 }
 
 #header {   
@@ -31,59 +73,78 @@ h1{
     vertical-align: middle;
 }
 
-.playground{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: fit-content;
-    margin-top: 50px;
+
+#playgroundContainer{
+    display: grid;
+    grid-template-columns: 17% auto 17%;
+    grid-template-rows: repeat(6, 13%);
+    grid-template-areas: 
+    "characterP . characterC"
+    "playerHand rounds computerHand"
+    "playerHand wins computerHand"
+    "playerHand losses computerHand"
+    "playerHand draws computerHand"
+    "playerHand playAgain computerHand";
+    justify-content: center;
+    justify-items: center;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    column-gap: 50px;
+    row-gap: 25px;
 }
 
-#player {
-    float: left;
-    margin-left: 500px;
-
+.handPic{
+    height: 300px;
 }
 
-#computer {
-    float: right;
-    margin-right: 500px;
+#playerHand {
+    grid-area: playerHand;
 }
 
-.playgroundText{
-    margin: 0 auto 0 auto;
-    font-size: 24px;
+#computerHand{
+    grid-area: computerHand;
 }
 
-
-
-.questionPic{
-    width: 200px;
-    height: auto;
+#characterP{
+    grid-area: characterP;
 }
 
-.choices {
-    font-size: 30px;
-    margin: auto 100px auto 100px;
+#characterC {
+    grid-area: characterC;
 }
 
+#roundCount {
+    grid-area: rounds;
+}
 
-#choiceWrap{
+#winCount {
+    grid-area: wins;
+}
+
+#lossCount {
+    grid-area: losses;
+}
+
+#drawCount {
+    grid-area: draws;
+}
+
+#playAgain {
+    grid-area: playAgain;
+}
+
+#header2Wrap{
     display: flex;
     position: relative;
     width: 100%;
-    margin-top: 50px;
     justify-content: center;
-    vertical-align: middle;
-    line-height: 80px;
 }
 
 #pictures{
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 35px;
 
 }
 

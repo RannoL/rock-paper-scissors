@@ -10,17 +10,23 @@
     <h1>Rock Paper Scissors</h1>
   </div>
 
-  <div id="player" class="playground">
-    <span class="playgroundText">Player</span>
-    <img class="questionPic" src="imgs/questionMark.png" alt="questionMark">
-  </div>
+  <main id="playgroundContainer">
+    <div id="characterP">Player</div>
+    <div id="playerHand">
+      <img class="handPic playerPic" src="imgs/questionMark.png" alt="questionMark">
+    </div>
+    <div id="roundCount">Round: 0</div>
+    <div id="winCount">Wins: 0</div>
+    <div id="lossCount">Losses: 0</div>
+    <div id="drawCount">Draws: 0</div>
+    <div id="playAgain"></div>
+    <div id="characterC">Computer</div>
+    <div id="computerHand"> 
+      <img class="handPic computerPic" src="imgs/questionMark.png" alt="questionMark">
+    </div>
+  </main>
 
-  <div id="computer" class="playground">
-    <span class="playgroundText">Computer</span>
-    <img class="questionPic" src="imgs/questionMark.png" alt="questionMark">
-  </div>
-  
-  <div id = "choiceWrap">
+  <div id = "header2Wrap">
     <h2 id= "header2">Make your choice!</h2>
   </div>
 
@@ -30,10 +36,18 @@
       <img id= "scissors" class="rockPaperScissors" src= "imgs/scissors.png">
   </div>
 
-<!--   <footer>
-  <a href="https://www.vecteezy.com/free-vector/rock-paper-scissors">Rock Paper Scissors Vectors by Vecteezy</a>
-    <a href="https://pngio.com/images/png-a74489.html" target="_blank">15 Purple question mark png for free download on mbtskoudsalg</a>
-  </footer> -->
+  <footer class="footerBar">
+
+      <div class="leftFooter">
+        <a href="https://github.com/RannoL/rock-paper-scissors" target="_blank">Made by: Ranno</a>
+      </div>
+
+      <div class="rightFooter">
+        <a href="https://www.vecteezy.com/free-vector/rock-paper-scissors" target="_blank">Rock Paper Scissors Vectors by Vecteezy</a>
+        <a href="https://pngio.com/images/png-a74489.html" target="_blank" target="_blank">Question Mark Vectors</a>
+    </div>
+
+</footer>
 
   <script src = 'script.js'></script>
 </body>
