@@ -1,6 +1,12 @@
 const inputs = document.querySelectorAll('.rockPaperScissors');
 const playerHand = document.querySelector('.playerPic');
 const computerHand = document.querySelector('.computerPic');
+const roundText = document.querySelector('#roundCount');
+const winText = document.querySelector('#winCount');
+const loseText = document.querySelector('#lossCount');
+const drawText = document.querySelector('#drawCount');
+
+
 
 function computerSelection(){
   let selection = ["rock", "paper", "scissors"]
@@ -57,6 +63,8 @@ for (i= 0; i < inputs.length; i++){
 }
 
 function playRound(playerSelection, computerSelection){
+
+
   playerHand.setAttribute("src", `imgs/${playerSelection}.png`);
   playerHand.setAttribute('class', 'choiceMade');
   computerHand.setAttribute("src", `imgs/${computerSelection}.png`);
