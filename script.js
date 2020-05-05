@@ -59,6 +59,8 @@ for (i= 0; i < inputs.length; i++){
 function playRound(playerSelection, computerSelection){
   playerHand.setAttribute("src", `imgs/${playerSelection}.png`);
   playerHand.setAttribute('class', 'choiceMade');
+  computerHand.setAttribute("src", `imgs/${computerSelection}.png`);
+  computerHand.setAttribute("class", "choiceMade");
 
 
 
