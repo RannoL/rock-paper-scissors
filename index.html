@@ -1,83 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
-  <meta charset="UTF-8"/>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <meta name="viewport" content="width=device-width" initial-scale="1" charset="UTF-8"/> 
 </head>
 <body>
-  <script>
 
-    function playerSelection(){
-      let playerSelection = prompt("Make your choice! Rock, Paper or Scissors?").toLowerCase()
-      if (playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors"){
-        return playerSelection
-      }else{
-        alert("Invalid choice!")
-      }
-    }
-    function computerSelection(){
-      let selection = ["rock", "paper", "scissors"]
-      let randomSelection = selection[Math.floor(Math.random() * selection.length)]
-      return randomSelection
-    }
-    
-    function playerWins(playerSelection, computerSelection){
-      return(`Player draws: ${playerSelection}\nComputer draws: ${computerSelection}\nYou win!`);
-    }
+  <div id = 'headerBar'>
+    <h1>Rock Paper Scissors</h1>
+  </div>
 
-    function draw(playerSelection, computerSelection){
-      return(`Player draws: ${playerSelection}\nComputer draws: ${computerSelection}\nIt's a draw!`)
-    }
+  <main id="playgroundContainer">
+    <div id="characterP">Player</div>
+    <div id="playerHand">
+      <img class="handPic playerPic" src="imgs/questionMark.png" alt="questionMark">
+    </div>
+    <div id="result"><button type = "button" class= 'button'></button></div>
+    <div id="roundCount" class='pinkBox'>Round: 0</div>
+    <div id="winCount" class='pinkBox'>Wins: 0</div>
+    <div id="lossCount" class='pinkBox'>Losses: 0</div>
+    <div id="drawCount" class='pinkBox'>Draws: 0</div>
+    <div id="playAgain"></div>
+    <div id="characterC">Computer</div>
+    <div id="computerHand"> 
+      <img class="handPic computerPic" src="imgs/questionMark.png" alt="questionMark">
+    </div>
+  </main>
 
-    function computerWins(playerSelection, computerSelection){
-      return(`Player draws: ${playerSelection}\nComputer draws: ${computerSelection}\nComputer wins.`);
-    }
+  <div id = "header2Wrap">
+    <h2 id= "header2">Make your choice!</h2>
+  </div>
 
-    function playRound(playerSelection, computerSelection){
-      if (playerSelection == undefined){
-        return(`Game canceled.`);
-      }else if (playerSelection == computerSelection){
-        return draw(playerSelection, computerSelection);
-      }else if(playerSelection == "rock" && computerSelection == "scissors"){
-        return playerWins(playerSelection, computerSelection);
-      }else if (playerSelection == "paper" && computerSelection == "rock"){
-        return playerWins(playerSelection, computerSelection);
-      }else if(playerSelection == "scissors" && computerSelection == "paper"){
-        return playerWins(playerSelection, computerSelection);
-      }else{
-        return computerWins(playerSelection, computerSelection);
-      }
-    }
+  <div id = 'choices'>
+      <button type= 'button' id= 'rockButton' class='button'>
+        <img id= "rock" class="rockPaperScissors" src= "imgs/rock.png">
+      </button>
+      <button type= 'button' id= 'paperButton' class='button'>
+        <img id= "paper" class="rockPaperScissors" src= "imgs/paper.png">
+      </button>
+      <button type= 'button' id= 'scissorsButton' class='button'>
+        <img id= "scissors" class="rockPaperScissors" src= "imgs/scissors.png">
+      </button>
+  </div>
 
-    function playGame(){
-      let i = 0; 
-      let playerWins = 0;
-      let computerWins = 0;
-      let draws = 0;
-      while (i < 5){
-        let result = playRound(playerSelection(), computerSelection());
-        console.log(result)
-        if (result.includes("You win!")){
-          playerWins++;
-        }else if (result.includes("Computer wins.")){
-          computerWins++;
-        }else if (result.includes("It's a draw!")){
-          draws++
-        }
-        i++; 
-      }
-     if (playerWins > computerWins){
-      return (`You win!\nFinal results: Player wins: ${playerWins}\nDraws: ${draws}\nComputer wins: ${computerWins}`)
-     }else if(playerWins == computerWins){
-       return (`It's a draw!\nFinal results: Player wins: ${playerWins}\nDraws: ${draws}\nComputer wins: ${computerWins}`)
-     }else{
-       return (`Computer wins.\nFinal results: Player wins: ${playerWins}\nDraws: ${draws}\nComputer wins: ${computerWins}`)
-     } 
-    }
+  <footer class="footerBar">
 
- 
-    console.log(playGame());
+      <div class="leftFooter">
+        <a href="https://github.com/RannoL/rock-paper-scissors" target="_blank">Made by: Ranno</a>
+      </div>
 
-  </script>
+      <div class="rightFooter">
+        <a href="https://www.vecteezy.com/free-vector/rock-paper-scissors" target="_blank">Rock Paper Scissors Vectors by Vecteezy</a>
+        <a href="https://pngio.com/images/png-a74489.html" target="_blank" target="_blank">Question Mark Vectors</a>
+    </div>
+
+</footer>
+
+  <script src = 'script.js'></script>
 </body>
 </html>
