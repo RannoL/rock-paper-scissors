@@ -80,7 +80,7 @@ a{
     grid-template-columns: 17% auto 17%;
     grid-template-rows: repeat(6, 13%);
     grid-template-areas: 
-    "characterP . characterC"
+    "characterP result characterC"
     "playerHand rounds computerHand"
     "playerHand wins computerHand"
     "playerHand losses computerHand"
@@ -116,7 +116,7 @@ a{
 
 .pinkBox{
     display: flex;
-    width: 100px;
+    width: 120px;
     background: rgb(38,20,71);
     background: linear-gradient(0deg, rgba(38,20,71,1) 0%, rgba(13,2,33,1) 100%); ;
     justify-content: center;
@@ -124,6 +124,9 @@ a{
     border: 1px solid rgb(247, 6, 207);
     padding: 10px;
     border-radius: 10%;
+    font-size: 18px;
+    opacity: 0.85;
+    transition: .6s ease;
 }
 
 #roundCount {
@@ -147,6 +150,10 @@ a{
     grid-area: playAgain;
 }
 
+#results {
+    grid-area: result;
+}
+
 #header2Wrap{
     display: flex;
     position: relative;
@@ -162,6 +169,12 @@ a{
 
 }
 
+.button {
+    background-color: transparent;
+    border: none;
+    outline-style: none;
+    cursor: pointer;
+}
 
 .rockPaperScissors{
     transition: .3s ease;
@@ -171,7 +184,6 @@ a{
     margin: 0px 30px auto 30px;
     padding: 0.5%;
     border-radius: 40%;
-    cursor: pointer;
 }
    
 .rockPaperScissors:hover {
@@ -182,11 +194,44 @@ a{
                     drop-shadow(-1px -1px 0 rgba(247, 6, 207, 0.616));
     filter: drop-shadow(1px 1px 0 black)
             drop-shadow(-1px -1px 0 rgba(247, 6, 207, 0.589));
-   /*  background-color:rgba(247, 6, 207, 0.575); */
 }
 
 .choiceMade{
     width: 200px;
     height: 200px;
     margin-top: 50px;
+    transition: .2s ease-in-out ;
 }
+
+.win{
+    background: rgb(1, 255, 107);
+    color: rgb(43, 43, 43);
+    transition: .2s ease;
+    opacity: 1;
+}
+
+.lose {
+    background: rgb(253, 29, 83);
+    transition: .2s ease;
+    opacity: 1;
+}
+
+.draw {
+    background: rgb(249,200,14);
+    color: rgb(43, 43, 43);
+    transition: .2s ease;
+    opacity: 1;
+}
+
+.playAgain {
+    width: 300px;
+    cursor: pointer;
+}
+
+.endGame {
+    transition: .5s ease-in-out;
+    pointer-events: none;
+    filter: grayscale(100%);
+    opacity: 0.1;
+}
+
