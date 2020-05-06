@@ -57,7 +57,7 @@ a{
 
 .leftFooter a{
    color: rgba(211, 246, 255, 0.4);
-   padding: 0 0 0 21px
+   padding: 0 0 0 15px
 }
 
 .rightFooter{
@@ -90,7 +90,7 @@ a{
     justify-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    column-gap: 50px;
+    column-gap: 75px;
     row-gap: 25px;
 }
 
@@ -114,12 +114,25 @@ a{
     grid-area: characterC;
 }
 
+.pinkBox{
+    display: flex;
+    width: 100px;
+    background: rgb(38,20,71);
+    background: linear-gradient(0deg, rgba(38,20,71,1) 0%, rgba(13,2,33,1) 100%); ;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(247, 6, 207);
+    padding: 10px;
+    border-radius: 10%;
+}
+
 #roundCount {
-    grid-area: rounds;
+    grid-area: rounds;   
 }
 
 #winCount {
     grid-area: wins;
+    
 }
 
 #lossCount {
@@ -151,6 +164,7 @@ a{
 
 
 .rockPaperScissors{
+    transition: .3s ease;
     display: inline-block;
     width: 100px;
     height: 100px;
@@ -161,10 +175,14 @@ a{
 }
    
 .rockPaperScissors:hover {
-    transition: ease-in-out;
+    transition: all .3s ease;
     width: 150px;
     height: 150px;
-    background-color:rgba(247, 6, 207, 0.575);
+    -webkit-filter: drop-shadow(1px 1px 0 black)
+                    drop-shadow(-1px -1px 0 rgba(247, 6, 207, 0.616));
+    filter: drop-shadow(1px 1px 0 black)
+            drop-shadow(-1px -1px 0 rgba(247, 6, 207, 0.589));
+   /*  background-color:rgba(247, 6, 207, 0.575); */
 }
 
 .choiceMade{
